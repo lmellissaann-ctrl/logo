@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif; /* Google Font Applied Globally */
+}
+
+body {
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+/* HEADER */
+
+header {
+  border: 2px solid black;
+  padding: 15px 25px;
+  background: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: red;
+}
+
+.welcome {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* CONTAINER */
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+
+.card {
+  background: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  min-height: 250px;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* BIODATA */
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.card p {
+  margin: 15px 0;
+  font-size: 18px;
+}
+
+.card i {
+  color: red;
+  width: 25px;
+}
+
+/* IMAGE OVERLAP */
+
+.image-container {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: auto;
+}
+
+.image-back {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 140px;
+  height: 180px;
+
+  border: 2px solid black;
+  object-fit: cover;
+}
+
+.image-front {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 180px;
+  height: 180px;
+
+  border: 2px solid black;
+  object-fit: cover;
+  background: white;
+}
+
+/* LINKS */
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin: 15px 0;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: overline;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  header {
+    /* Elements stay row-aligned (side-by-side) on mobile viewports */
+    padding: 15px 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
